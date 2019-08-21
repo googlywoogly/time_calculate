@@ -31,7 +31,7 @@ Tuesday | 02:00 PM | Day 5 | 02:00 PM – 08:00 AM | 360 minutes
 1. Download python script in directory; let say /tmp/calculate_time
 2. Create a file with name holiday.csv at same location with following format.  /tmp/calculate_time/holiday.csv\
 Syntax:\
-``` mm/dd/yyyy, holiday_name ```
+``` mm/dd/yyyy, holiday_name ```\
 \
 Example:\
 ```08/12/2019, holiday1```
