@@ -8,20 +8,20 @@ For an instance, let say my working or business hours are from 08:00 AM to 05:00
 
 Another example is, let say ticket opened at 11:00 AM on Monday and closed on 02:00 PM on Wednesday. Since my working or business hours are from 08:00 AM to 05:00 PM. Time to resolve this ticket would be
 
-Opened at Monday    * 11:00 AM    *	 Day 1  * 	05:00 PM – 11:00 AM          *	360 minutes
-Tuesday	            *             *      Day2   *	Whole day will be consider   *	540 minutes
-Closed on Wednesday * 02:00 PM    *	 Day3   *	02:00 PM – 08:00 AM	     *  360 minutes
-         	    *             *             *       Total time to solve ticket   * 1260 minutes
+Opened at Monday    * 11:00 AM * Day 1 * 05:00 PM – 11:00 AM         *  360 minutes
+Tuesday             *          * Day 2 * Whole day will be consider  *  540 minutes
+Closed on Wednesday * 02:00 PM * Day3  * 02:00 PM – 08:00 AM         *  360 minutes
+                    *          *       * Total time to solve ticket  * 1260 minutes
 
 
 Script will also exclude weekend like Saturday, Sunday and exclude any given holidays. For instance, ticket opened at 11:00 AM on Friday and closed on 02:00 PM on Tuesday. Let say Monday is a given holiday and Saturday, Sunday will be exclude from time calculation and Time to resolve this ticket would be
 
-Opened at Friday      *	11:00 AM    *	Day 1  * 	05:00 PM – 11:00 AM               *	360 minutes
-Saturday	      *	            *   Day2   *	Weekend, don’t need to consider   *	  0 minutes
-Sunday 	              *	            *   Day3   *	Weekend, don’t need to consider   *	  0 minutes
-Monday 	              *	            *   Day4   *	Holiday, don’t need to consider   *	  0 minutes
-Closed on Tuesday     *	02:00 PM    *	Day5   *	02:00 PM – 08:00 AM	          *     360 minutes
-		      *	            *          *        Total time to solve ticket        *	720 minutes
+Opened at Friday  * 11:00 AM * Day 1 * 05:00 PM – 11:00 AM             * 360 minutes
+Saturday          *          * Day2  * Weekend, don’t need to consider *   0 minutes
+Sunday            *          * Day3  * Weekend, don’t need to consider *   0 minutes
+Monday            *          * Day4  * Holiday, don’t need to consider *   0 minutes
+Closed on Tuesday * 02:00 PM * Day5  * 02:00 PM – 08:00 AM             * 360 minutes
+                  *          *       * Total time to solve ticket      * 720 minutes
 
 
 ** How to use this script **
