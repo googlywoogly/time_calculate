@@ -32,7 +32,7 @@ Tuesday | 02:00 PM | Day 5 | 02:00 PM – 08:00 AM | 360 minutes
 2. Create a file with name holiday.csv at same location with following format.  /tmp/calculate_time/holiday.csv\
 Syntax:\
 ``` mm/dd/yyyy, holiday_name ```
-
+\
 Example:\
 ```08/12/2019, holiday1```
 
@@ -40,9 +40,9 @@ Example:\
 3. Use the script as following\
 Syntax:\
 ```./calculate_ticket_business_hours.py --start_date=mm/dd/yyyy --start_time=HH:MM --stop_date=mm/dd/yyyy --stop_time=HH:MM```\
-
+\
 Example:\
 ```./calculate_ticket_business_hours.py --start_date=08/05/2019 --start_time=09:00 --stop_date=08/05/2019 --stop_time=11:30```\
-
+\
 Output:\
 ```Total time taken to resolve ticket is 150 minutes```
