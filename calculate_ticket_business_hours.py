@@ -13,16 +13,22 @@ def get_start_and_stop_date():
     global start_time
     global stop_date
     global stop_time
+    global holiday_file
+    global weekoff_day1
+    global weekoff_day2
     start_date = None
     start_time = None
     stop_date = None
     stop_time = None
+    holiday_file = None
+    weekoff_day1 = None
+    weekoff_day2 = None
 
     argv = sys.argv[1:]
     #print(argv)
 
     try:
-        opts, args = getopt.getopt(argv, 's:t:e:m:h', ["start_date=", "start_time=", "stop_date=", "stop_time=", "help"])
+        opts, args = getopt.getopt(argv, 's:t:e:m:f:w:d:h', ["start_date=", "start_time=", "stop_date=", "stop_time=", "holiday_file=", "weekend1=", "weekend2=", "help"])
     except getopt.GetoptError as error:
         print(error)
         print "Invalid syntax."
@@ -39,10 +45,16 @@ def get_start_and_stop_date():
             stop_date = arg
         elif opt in ['-m', '--stop_time']:
             stop_time = arg
+        elif opt in ['-f', '--holiday_file']:
+            holiday_file = arg
+        elif opt in ['-w', '--weekend1']:
+            weekoff_day1 = arg
+        elif opt in ['-d', '--weekend2']:
+            weekoff_day2 = arg
         elif opt in ['-h', '--help']:
             print "\nCalculate business hours between two timestamps.\n"
-            print "Syntax:\n ",sys.argv[0],"--start_date=mm/dd/yyyy --start_time=HH:MM --stop_date=mm/dd/yyyy --stop_time=HH:MM\n"
-            print "Example:\n ",sys.argv[0],"--start_date=08/05/2019 --start_time=09:00 --stop_date=08/09/2019 --stop_time=16:30"
+            print "Syntax:\n ",sys.argv[0],"--start_date=mm/dd/yyyy --start_time=HH:MM --stop_date=mm/dd/yyyy --stop_time=HH:MM --holiday_file=filename --weekend1=day_of_week --weekend2=day_of_week\n"
+            print "Example:\n ",sys.argv[0],"--start_date=08/05/2019 --start_time=09:00 --stop_date=08/09/2019 --stop_time=16:30 --holiday_file=holidays.csv --weekend1=Saturday --weekend2=Sunday"
             sys.exit(0)
 
     if start_date == None or start_time == None or stop_date == None or stop_time == None:
